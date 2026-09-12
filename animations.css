@@ -1,0 +1,516 @@
+/* =========================================
+   GALANG PORTFOLIO
+   ANIMATIONS
+========================================= */
+
+
+/* =========================================
+   1. PAGE ENTRANCE
+========================================= */
+
+@keyframes pageReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body {
+    animation:
+        pageReveal 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+/* =========================================
+   2. HERO CONTENT
+========================================= */
+
+.hero-label {
+
+    animation:
+        heroFade 0.8s
+        0.15s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+.hero-content h1 {
+
+    animation:
+        heroFade 1s
+        0.25s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+.hero-description {
+
+    animation:
+        heroFade 1s
+        0.4s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+.hero-buttons {
+
+    animation:
+        heroFade 1s
+        0.55s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes heroFade {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   3. ORB FLOATING
+========================================= */
+
+@keyframes floatOrb {
+
+    0% {
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            translate3d(30px, -35px, 0)
+            scale(1.08);
+    }
+
+    100% {
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   4. ID CARD FLOAT
+========================================= */
+
+.id-card-rope {
+
+    animation:
+        cardFloat 5s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes cardFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(1.5deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+}
+
+
+/* =========================================
+   5. ID CARD SHINE
+========================================= */
+
+@keyframes cardShine {
+
+    0% {
+
+        transform:
+            translateX(-120%)
+            rotate(15deg);
+    }
+
+    25% {
+
+        transform:
+            translateX(120%)
+            rotate(15deg);
+    }
+
+    100% {
+
+        transform:
+            translateX(120%)
+            rotate(15deg);
+    }
+}
+
+
+/* =========================================
+   6. HINT PULSE
+========================================= */
+
+@keyframes hintPulse {
+
+    0% {
+
+        opacity:
+            0.35;
+    }
+
+    50% {
+
+        opacity:
+            1;
+    }
+
+    100% {
+
+        opacity:
+            0.35;
+    }
+}
+
+
+/* =========================================
+   7. BUTTON MICRO INTERACTION
+========================================= */
+
+.btn {
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.25),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.7s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.btn:hover::before {
+
+    left: 140%;
+}
+
+
+/* =========================================
+   8. GLASS CARD HOVER
+========================================= */
+
+.glass-card {
+
+    will-change:
+        transform;
+}
+
+
+.glass-card:hover {
+
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,0.22);
+}
+
+
+/* =========================================
+   9. SKILL CARD HOVER
+========================================= */
+
+.skill-card {
+
+    transition:
+        transform 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.5s
+        ease,
+        box-shadow 0.5s
+        ease;
+}
+
+
+.skill-card:hover {
+
+    transform:
+        translateY(-10px)
+        rotateX(2deg)
+        rotateY(-2deg);
+}
+
+
+/* =========================================
+   10. PROJECT CARD HOVER
+========================================= */
+
+.project-card {
+
+    transition:
+        transform 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.5s
+        ease;
+}
+
+
+.project-card:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+
+/* =========================================
+   11. CONTACT FLOAT
+========================================= */
+
+.contact-card {
+
+    animation:
+        contactFloat 6s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes contactFloat {
+
+    0% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   12. NAVBAR APPEAR
+========================================= */
+
+.navbar {
+
+    animation:
+        navbarReveal 0.8s
+        0.1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes navbarReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   13. SECTION HEADING
+========================================= */
+
+.section-heading {
+
+    transition:
+        transform 0.5s
+        ease;
+}
+
+
+.section-heading:hover {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================
+   14. CONTACT LINKS
+========================================= */
+
+.contact-links a {
+
+    transition:
+        transform 0.4s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.contact-links a:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+
+/* =========================================
+   15. IMAGE ZOOM
+========================================= */
+
+.id-card-photo {
+
+    transition:
+        transform 0.6s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.id-card:hover
+.id-card-photo {
+
+    transform:
+        scale(0.98);
+}
+
+
+/* =========================================
+   16. THEME BUTTON
+========================================= */
+
+.theme-toggle {
+
+    transition:
+        transform 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.3s ease;
+}
+
+
+.theme-toggle:active {
+
+    transform:
+        scale(0.85)
+        rotate(180deg);
+}
+
+
+/* =========================================
+   17. SMOOTH FOCUS
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline:
+        2px solid
+        var(--text-primary);
+
+    outline-offset:
+        4px;
+}
+
+
+/* =========================================
+   18. MOBILE MOTION
+========================================= */
+
+@media (max-width: 768px) {
+
+    .id-card-rope {
+
+        animation-duration:
+            6s;
+    }
+
+
+    .contact-card {
+
+        animation-duration:
+            8s;
+    }
+
+}
