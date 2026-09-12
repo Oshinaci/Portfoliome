@@ -1,0 +1,797 @@
+/* =========================================
+   GALANG PORTFOLIO
+   RESPONSIVE STYLESHEET
+========================================= */
+
+
+/* =========================================
+   TABLET
+   <= 1024px
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .container {
+        width: min(
+            calc(100% - 32px),
+            900px
+        );
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+
+        grid-template-columns:
+            1fr 0.8fr;
+
+        gap: 30px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size:
+            clamp(48px, 7vw, 70px);
+
+        letter-spacing:
+            -3px;
+    }
+
+
+    /* ID CARD */
+
+    .id-card-area {
+
+        min-height: 560px;
+    }
+
+
+    .id-card {
+
+        width: 250px;
+        min-height: 370px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+
+        padding:
+            100px 0;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE LARGE
+   <= 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    /* =====================================
+       NAVBAR
+    ===================================== */
+
+    .navbar {
+
+        padding:
+            12px 0;
+    }
+
+
+    .navbar-container {
+
+        padding:
+            10px 12px 10px 18px;
+    }
+
+
+    .nav-menu {
+
+        display: none;
+    }
+
+
+    .logo {
+
+        font-size:
+            13px;
+
+        letter-spacing:
+            1.7px;
+    }
+
+
+    .theme-toggle {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            16px;
+    }
+
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .hero {
+
+        min-height:
+            auto;
+
+        padding-top:
+            110px;
+
+        padding-bottom:
+            70px;
+    }
+
+
+    .hero-container {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        gap:
+            20px;
+
+        min-height:
+            auto;
+
+        text-align:
+            center;
+    }
+
+
+    .hero-content {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .hero-label {
+
+        margin-bottom:
+            20px;
+
+        font-size:
+            8px;
+    }
+
+
+    .hero-content h1 {
+
+        max-width:
+            500px;
+
+        font-size:
+            clamp(43px, 12vw, 64px);
+
+        letter-spacing:
+            -3px;
+
+        line-height:
+            1;
+    }
+
+
+    .hero-description {
+
+        max-width:
+            480px;
+
+        margin-top:
+            22px;
+
+        font-size:
+            14px;
+
+        line-height:
+            1.7;
+    }
+
+
+    .hero-buttons {
+
+        justify-content:
+            center;
+
+        margin-top:
+            28px;
+    }
+
+
+    .btn {
+
+        min-height:
+            46px;
+
+        padding:
+            0 18px;
+
+        font-size:
+            11px;
+    }
+
+
+    /* =====================================
+       ID CARD
+    ===================================== */
+
+    .id-card-area {
+
+        width:
+            100%;
+
+        min-height:
+            520px;
+
+        margin-top:
+            10px;
+    }
+
+
+    .id-card-rope {
+
+        width:
+            250px;
+    }
+
+
+    .rope-line {
+
+        top:
+            -150px;
+
+        height:
+            200px;
+    }
+
+
+    .rope-line::before {
+
+        top:
+            135px;
+    }
+
+
+    .id-card {
+
+        width:
+            240px;
+
+        min-height:
+            350px;
+
+        padding:
+            18px;
+
+        border-radius:
+            21px;
+    }
+
+
+    .id-card-info h2 {
+
+        font-size:
+            22px;
+    }
+
+
+    .card-hint {
+
+        bottom:
+            15px;
+    }
+
+
+    /* =====================================
+       SECTIONS
+    ===================================== */
+
+    .section {
+
+        padding:
+            80px 0;
+    }
+
+
+    .section-heading {
+
+        gap:
+            12px;
+
+        margin-bottom:
+            30px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            38px;
+
+        letter-spacing:
+            -1.5px;
+    }
+
+
+    .section-heading span {
+
+        font-size:
+            9px;
+    }
+
+
+    /* =====================================
+       ABOUT
+    ===================================== */
+
+    .about-card {
+
+        padding:
+            28px;
+    }
+
+
+    .about-card p {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.7;
+    }
+
+
+    .about-stats {
+
+        padding:
+            28px;
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            15px;
+    }
+
+
+    .stat strong {
+
+        font-size:
+            38px;
+    }
+
+
+    /* =====================================
+       SKILLS
+    ===================================== */
+
+    .skills-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            14px;
+    }
+
+
+    .skill-card {
+
+        min-height:
+            210px;
+
+        padding:
+            25px;
+    }
+
+
+    .skill-card h3 {
+
+        margin-top:
+            55px;
+
+        font-size:
+            24px;
+    }
+
+
+    /* =====================================
+       PROJECTS
+    ===================================== */
+
+    .projects-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            15px;
+    }
+
+
+    .project-card {
+
+        min-height:
+            340px;
+
+        padding:
+            24px;
+    }
+
+
+    .project-image {
+
+        height:
+            160px;
+
+        margin-bottom:
+            20px;
+    }
+
+
+    .project-card h3 {
+
+        font-size:
+            23px;
+    }
+
+
+    /* =====================================
+       CONTACT
+    ===================================== */
+
+    .contact-section {
+
+        padding-bottom:
+            100px;
+    }
+
+
+    .contact-card {
+
+        padding:
+            40px 22px;
+    }
+
+
+    .contact-card h2 {
+
+        font-size:
+            clamp(38px, 11vw, 55px);
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    .contact-card p {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.7;
+    }
+
+
+    .contact-links {
+
+        gap:
+            8px;
+
+        margin-top:
+            25px;
+    }
+
+
+    .contact-links a {
+
+        padding:
+            9px 14px;
+
+        font-size:
+            9px;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    .footer {
+
+        padding:
+            25px 0 40px;
+
+        font-size:
+            9px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE SMALL
+   <= 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+
+        width:
+            calc(100% - 22px);
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding-top:
+            100px;
+
+        padding-bottom:
+            40px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size:
+            clamp(39px, 13vw, 54px);
+
+        letter-spacing:
+            -2.5px;
+    }
+
+
+    .hero-description {
+
+        padding:
+            0 8px;
+
+        font-size:
+            13px;
+    }
+
+
+    .hero-buttons {
+
+        width:
+            100%;
+
+        flex-direction:
+            column;
+
+        gap:
+            8px;
+    }
+
+
+    .hero-buttons .btn {
+
+        width:
+            100%;
+
+        max-width:
+            260px;
+    }
+
+
+    /* ID CARD */
+
+    .id-card-area {
+
+        min-height:
+            480px;
+    }
+
+
+    .id-card {
+
+        width:
+            225px;
+
+        min-height:
+            330px;
+    }
+
+
+    .rope-line {
+
+        top:
+            -140px;
+
+        height:
+            185px;
+    }
+
+
+    .rope-line::before {
+
+        top:
+            125px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+
+        padding:
+            65px 0;
+    }
+
+
+    .section-heading {
+
+        margin-bottom:
+            25px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            32px;
+    }
+
+
+    /* ABOUT */
+
+    .about-card {
+
+        padding:
+            23px;
+    }
+
+
+    .about-stats {
+
+        padding:
+            23px;
+    }
+
+
+    .stat strong {
+
+        font-size:
+            32px;
+    }
+
+
+    /* SKILLS */
+
+    .skill-card {
+
+        min-height:
+            190px;
+
+        padding:
+            22px;
+    }
+
+
+    /* PROJECT */
+
+    .project-card {
+
+        min-height:
+            320px;
+
+        padding:
+            20px;
+    }
+
+
+    .project-image {
+
+        height:
+            145px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-card {
+
+        padding:
+            35px 18px;
+    }
+
+
+    .contact-card h2 {
+
+        font-size:
+            37px;
+
+        letter-spacing:
+            -1.5px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREEN
+   <= 360px
+========================================= */
+
+@media (max-width: 360px) {
+
+    .hero-content h1 {
+
+        font-size:
+            36px;
+    }
+
+
+    .id-card {
+
+        width:
+            210px;
+
+        min-height:
+            315px;
+    }
+
+
+    .contact-card h2 {
+
+        font-size:
+            33px;
+    }
+
+      }
